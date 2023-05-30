@@ -56,7 +56,6 @@ const propertyList = async (req, res) => {
         { propertyName: { $regex: search, $options: "i" } },
         { location: { $regex: filter, $options: "i" } },
         { propertyCategory: { $regex: filter, $options: "i" } },
-        { propertyPrice: { $regex: filter, $options: "i" } },
       ],
     };
     if (property == "myproperty" && role == "seller") {
