@@ -54,8 +54,9 @@ const propertyList = async (req, res) => {
     where = {
       $or: [
         { propertyName: { $regex: search, $options: "i" } },
-        { Location: { $regex: filter, $options: "i" } },
-        { productCategory: { $regex: filter, $options: "i" } },
+        { location: { $regex: filter, $options: "i" } },
+        { propertyCategory: { $regex: filter, $options: "i" } },
+        { propertyPrice: { $regex: filter, $options: "i" } },
       ],
     };
     if (property == "myproperty" && role == "seller") {
